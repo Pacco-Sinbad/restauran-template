@@ -1,0 +1,568 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+#arrow{
+  display: block;
+  bottom: 0;
+  right: 50%;
+
+}
+
+#arrow i{
+  color: rgb(197, 174, 145);
+  font-size: 40px;
+  -webkit-text-stroke: .5px black;
+}
+main #arrow i{
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  padding-bottom: 1.5%;
+}
+.discover #arrow i{
+  width: 100%;
+  transform: translateX(50%);
+  padding-top: 2%;
+  
+}
+.order #arrow{
+  padding-bottom: 1.7%;
+}
+.hours #arrow{
+  padding-top: 1.7%;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+section{
+  width: 85%;
+  margin: 0 auto;
+}
+
+h2{
+  color: rgb(83, 42, 0);
+  margin: 5em 0 2em 0;
+  clear: both;
+}
+
+h3,
+h1{
+  font-size: 4em;
+  font-weight: 700;
+  margin: 0 0 .5em 0;
+}
+
+p{
+  line-height: 1.5em;
+}
+
+.container{
+  width: 100%;
+}
+
+h5{
+  color: wheat;
+}
+/* +++++ BUTTONS ++++++ */
+
+.btn{
+  background-color: rgb(255, 112, 60);
+  border-radius: 0 .75em .75em 0;
+  display: inline-block;
+  vertical-align: auto;
+  color: wheat;
+  text-decoration: none;
+  text-align: center;
+  font-size: .75em;
+  font-weight: 700;
+  padding: 1em;
+}
+.btnAlt{
+  height: 2.75em;
+}
+
+.btn:hover{
+  color: rgb(71, 71, 71);
+  background-color: rgb(255 148 41);
+  
+}
+
+/* +++++ MAIN +++++ */
+header {
+  width: 100%;
+  height: 3.5em;
+  background-color: rgba(0, 0, 0, 0.651);
+
+}
+nav {
+  float: right;
+  width: fit-content;
+  margin: 1em 2em 10em 0;
+}
+nav li{
+  float: left;
+  width: fit-content;
+  margin: 0 1em;
+  vertical-align: auto;
+}
+nav a{
+  color: wheat;
+}
+
+nav a:hover{
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  font-variant: small-caps;
+}
+  
+h1{
+  clear: both;
+  -webkit-text-stroke: .5px bisque;
+}
+form{
+  margin: 0 0 1em 0;
+  float: left;
+  
+}
+
+form input{
+  display: block;
+  float: left;
+  width: 20em;
+  background-color: rgb(230, 206, 175);
+}
+
+form .btn{
+  float: left;
+  transform: translateY(4%);
+}
+
+.social{
+  margin: 1em .2em 0 0;
+  float: left;
+  display: block;
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: .2px rgb(0, 0, 0);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.socials{
+  clear: both;
+  margin: 0;
+  width: 100%;
+}
+
+main{
+  height: 57rem;
+  background-image: url(dinnerTable2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+@media only screen and (max-width: 1000px){
+  nav li{
+    margin: .25em .25em;
+  }
+  /* nav{
+    float: none;
+  } */
+}
+@media only screen and (max-width: 600px){
+  nav li:nth-child(2),
+  nav li:nth-child(5),
+  nav li:nth-child(6){
+    display: none;
+  }
+  nav li{
+    margin: .25em .25em 1em .25em ;
+  }
+  /* nav{
+    float: none;
+  } */
+  h3,
+  h1{
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0 0 .5em 0;
+  }
+  form input{
+    display: block;
+    float: left;
+    width: 10em;
+  }
+}
+/* +++++ ABOUT US ++++++ */
+
+.story{
+  float: right;
+  clear: both;
+  width: 600px;
+  background-color: rgba(255, 228, 196, 0.616);
+  margin-top: 4rem;
+  border-radius: 5px;
+}
+
+.aboutUs h2,
+.aboutUs h3,
+.aboutUs p{
+  padding: 0 2rem;
+}
+
+.aboutUs h2{
+  font-size: 1.5rem;
+  margin-top: 1em;
+}
+.aboutUs h3{
+  margin: 0 0 .5em 0;
+}
+
+.aboutUs{
+  height: 50em;
+  text-align: left;
+}
+
+.aboutUs p+p{
+  margin: 1em 0;
+}
+
+.aboutUs a{
+  border-radius: .75em;
+  margin: 0 0 1em 2rem;
+}
+
+.discover{
+  height: 57rem;
+  background-image: url(reserved.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 70%;
+}
+
+@media only screen and (max-width: 600px){
+  .story{
+    float: right;
+    clear: both;
+    width: 100%;
+    margin: 0 0 4em 0;
+  }
+}
+
+/* ++++++ ORDER ++++++ */
+
+
+.order{
+  text-align: center;
+  height: fit-content;
+  width: 100%;
+  background-image: url(table.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.order h3{
+  margin: 0 0 1rem 0;
+  padding-top: 1rem;
+}
+.meals{
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.meals li{
+  float: left;
+  width: fit-content;
+}
+
+.meals a{
+  padding: 1em 2em;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid black;
+}
+
+.meals a:hover{
+  color: rgb(255 148 41);
+  border-bottom: 2px solid rgb(255 148 41);
+}
+
+.plates{
+  clear: both;
+  margin: 5em 0;
+}
+
+.plates li{
+  width: 23.0%;
+  height: 17em;
+  float: left;
+  margin: 1% 1%;
+}
+
+.back section{
+  height: 100%;
+  width: 100%;
+  padding: 3em 0 0 0;
+  background-color: rgba(59, 56, 56, 0.6);
+  color: wheat;
+  font-size: 1.5em;
+}
+
+.back h5{
+  text-decoration: underline;
+  font-size: 2em;
+}
+
+.back section p{
+  margin-top: .5em;
+}
+
+
+.deck{
+  width: 100%;
+  margin: 0 0 3em 0;
+}
+
+.alignmentFix{
+  width: 90%;
+  height: fit-content;
+  display: block;
+
+}
+
+@media only screen and (max-width: 1000px){
+  .plates li{
+    width: 46.0%;
+    height: 20em;
+    float: left;
+    margin: 1% 1%;
+  }
+}
+@media only screen and (max-width: 600px){
+  .plates li{
+    width: 92.0%;
+    height: 20em;
+    float: left;
+    margin: 1% 1%;
+  }
+  .meals a{
+    padding: 1em .25em;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 0px solid black;
+    border-right: 1px solid black;
+
+  }
+  .meals li:last-child a{
+    border-right: 0px;
+  }
+}
+
+
+/* +++++ CARDS +++++ */
+
+.cardContainer{
+  position: relative;
+  perspective: 600;
+}
+.card{
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  /* transition: all 1s ease-in-out; */
+  width: 100%;
+}
+.card:hover{
+  transform: rotateY(180deg);
+}
+.card .side{
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back{
+  transform: rotateY(180deg);
+}
+
+.fone{
+  background-image: url(food1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ftwo{
+  background-image: url(food2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.fthree{
+  background-image: url(food3.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+}
+.ffour{
+  background-image: url(food4.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+}
+.ffive{
+  background-image: url(foood5.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+}
+.fsix{
+  background-image: url(food6.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+}
+.fseven{
+  background-image: url(food7.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+}
+.feight{
+  background-image: url(food8.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;  
+}
+
+/* +++++ Hours +++++ */
+
+
+
+.hours{
+  text-align: center;
+  background-color: rgb(177, 161, 140);
+  width: 100%;
+  height: 59rem;
+}
+
+.hours h2{
+  margin: 0;
+  padding: 1rem 0 1rem 0;
+}
+
+.hours span{
+  display: block;
+}
+
+.hours i,
+.hours .phone{
+  font-size: 2.5em;
+  color: rgb(77, 49, 22);
+ 
+}
+
+
+
+.MT,
+.FS{
+  width: fit-content;
+  margin: 0 1em 2em 1em;
+}
+
+.weekdays{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.day{
+  font-size: 2em;
+  padding: .25em;
+}
+
+
+figure{
+  background-image: url(bar.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  clear: both;
+  padding: 30% 0 0 0;
+  margin: 0 auto 0 auto;
+  display: block;
+  width: 30%;
+  height: 50%;
+}
+
+/* +++++ TESTIMONIALS +++++ */
+
+.testimonials{
+  text-align: center;
+  height: 59rem;
+}
+
+.testimonials h2{
+  margin: 1em 0 1em 0;
+  clear: both;
+}
+
+.fatFace{
+  background-image: url(wine.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  clear: both;
+  margin: 0 auto;
+  display: block;
+  width: 30%;
+  border-radius: 100%;
+  border: 5px solid slategray;
+}
+
+
+.testimonials h4,
+.testimonials .stars,
+.testimonials p{
+  margin: 1rem 0;
+}
+
+.stars{
+  color: rgb(107, 107, 0);
+}
+
+.testimonials h4{
+  font-size: 2em;
+  font-weight: 700;
+  
+}
+
+.testimonials p{
+  width: 50%;
+  margin: 0 auto 15em auto;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
