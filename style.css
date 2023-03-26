@@ -131,19 +131,26 @@ header {
   width: 100%;
   height: 3.5em;
   background-color: rgba(0, 0, 0, 0.582);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: fit-content;
   
 }
-
-nav {
-  float: right;
-  width: fit-content;
-  margin: 1em 2em 10em 0;
-}
 nav li{
-  float: left;
   width: fit-content;
   margin: 0 1em;
-  vertical-align: auto;
 }
 nav a{
   color: rgb(219, 195, 151);
@@ -160,6 +167,7 @@ nav a:hover{
 h1{
   clear: both;
   -webkit-text-stroke: .5px bisque;
+  margin-top: 2em;
 }
 form{
   margin: 0 0 1em 0;
@@ -203,31 +211,24 @@ main{
   background-position-y: center;
 }
 
-@media only screen and (max-width: 1000px){
-  nav li{
-    margin: .25em .25em;
-  }
-  /* nav{
-    float: none;
-  } */
-}
 @media only screen and (max-width: 600px){
-  nav li:nth-child(2),
-  nav li:nth-child(5),
-  nav li:nth-child(6){
-    display: none;
+  main section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav{
+    flex-direction: row;
+    justify-content: center;
+    font-size: .75em;
   }
   nav li{
-    margin: .25em .25em 1em .25em ;
+    margin: 0 .5em;
   }
-  /* nav{
-    float: none;
-  } */
   h3,
   h1{
     font-size: 3em;
     font-weight: 700;
-    margin: 0 0 .5em 0;
   }
   form input{
     display: block;
@@ -235,6 +236,13 @@ main{
     width: 10em;
   }
 }
+
+
+
+
+
+
+
 /* +++++ ABOUT US ++++++ */
 
 .story{
@@ -640,7 +648,4 @@ figure{
 /*******************************************/
 
 
-/**************************************************************
-                  TRANSITIONS
-****************************************************************/
 
